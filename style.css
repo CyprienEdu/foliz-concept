@@ -226,3 +226,5 @@ footer .disclaimer { grid-column: 1 / -1; border-top: 1px solid #3a342e; padding
 }
 .toast { white-space: nowrap; max-width: calc(100% - 32px); overflow: hidden; text-overflow: ellipsis; }
 @media (max-width: 640px) { .toast { bottom: auto; top: 80px; transform: translate(-50%, -160px); } .toast.on { transform: translate(-50%, 0); } }
+.cocktail h3 { min-height: 2.05em; display: flex; align-items: flex-end; } .cocktail p { min-height: 3.1em; }
+@media (max-width: 480px) { .cocktail h3, .cocktail p { min-height: 0; } }
