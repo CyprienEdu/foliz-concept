@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>You scanned a Foliz bottle</title>
+<link rel="icon" href="img/logo-noir.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="scan">
+  <div class="hello">
+    <img class="logo" src="img/logo-noir.webp" alt="Foliz Kombucha">
+    <span class="kicker">Hey, you just scanned a bottle!</span>
+    <h1>Welcome to the bubble madness.</h1>
+  </div>
+
+  <div class="bottles">
+    <img src="img/aventurier.webp" alt=""><img src="img/passionne.webp" alt=""><img src="img/gourmand.webp" alt=""><img src="img/festif.webp" alt=""><img src="img/voyageur.webp" alt="">
+  </div>
+
+  <div class="panel">
+    <h2>The story in your hand</h2>
+    <ol>
+      <li>Brewed by hand in Cologne, a small village in the Gers.</li>
+      <li>Organic fermented tea, real fruit, low sugar.</li>
+      <li>Returnable bottle: bring your 75 cl back with Consign'Up.</li>
+    </ol>
+  </div>
+
+  <div class="panel" style="background:var(--red);color:#fff;border:0">
+    <h2>−10% on your first order</h2>
+    <p>Join the Foliz crew: new flavours, Foliz Bike spots, event invites.</p>
+    <form class="nl-form" data-done="<p style='margin-top:12px'><b>You're in!</b> Your code: <span class='code' style='border-color:#fff'>FOLIZ10</span></p>">
+      <input type="email" name="email" required placeholder="your@email.com" aria-label="Email">
+      <button class="btn" style="background:#fff;color:var(--ink);border-color:#fff">Join</button>
+    </form>
+  </div>
+
+  <div class="stack">
+    <a class="btn" href="index.html#match">Find your Kombucha Match</a>
+    <a class="btn ghost" href="index.html#stores">Where to buy Foliz</a>
+    <a class="btn ghost" href="index.html#shop">Shop online</a>
+  </div>
+  <p class="note" style="text-align:center">Student project by CAK'ONSULT (TSM). Not affiliated with Foliz Kombucha.</p>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Foliz Kombucha — concept site by CAK'ONSULT</title>
+<meta name="description" content="Student concept: redesign of the Foliz Kombucha website (e-commerce, store locator, newsletter, Kombucha Match).">
+<link rel="icon" href="img/logo-noir.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#"><img src="img/logo-noir.webp" alt="Foliz Kombucha"></a>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#match">Kombucha Match</a>
+      <a href="#stores">Find a store</a>
+      <a href="#mixology">Mixology</a>
+      <a href="#story">Our story</a>
+    </nav>
+    <button class="cart-btn" data-open-cart>Cart<b id="count">0</b></button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Brewed in the Gers, drunk in Toulouse</span>
+      <h1>Join the <em>bubble</em> madness.</h1>
+      <p>Organic craft kombucha, flavoured with real fruit, naturally sparkling and low in sugar. In returnable bottles, from our microbrewery to your door.</p>
+      <div class="ctas">
+        <a class="btn" href="#shop">Shop the range</a>
+        <a class="btn ghost" href="#stores">Find a store near you</a>
+      </div>
+    </div>
+    <div class="shelf">
+      <img src="img/festif.webp" alt="">
+      <img src="img/passionne.webp" alt="">
+      <img src="img/aventurier.webp" alt="L'Aventurier bottle">
+      <img src="img/voyageur.webp" alt="">
+      <img src="img/gourmand.webp" alt="">
+    </div>
+  </div>
+</section>
+
+<div class="ribbon" aria-hidden="true"><div>
+  <span>100% organic</span><span>Real fruit</span><span>Low sugar</span><span>Returnable 75 cl bottles with Consign'Up</span><span>Home delivery with Le Fourgon</span><span>Made in Cologne, Gers</span>
+  <span>100% organic</span><span>Real fruit</span><span>Low sugar</span><span>Returnable 75 cl bottles with Consign'Up</span><span>Home delivery with Le Fourgon</span><span>Made in Cologne, Gers</span>
+</div></div>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="shop-head">
+      <div>
+        <span class="kicker">The range</span>
+        <h2>Pick your bubbles</h2>
+      </div>
+      <div class="chips" role="group" aria-label="Filter">
+        <button data-filter="all" aria-pressed="true">All</button>
+        <button data-filter="kombucha" aria-pressed="false">Kombucha</button>
+        <button data-filter="ginger" aria-pressed="false">Ginger beer</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="note">Indicative prices for this concept. 75 cl bottles carry a refundable Consign'Up deposit. Delivered in Toulouse and Bordeaux by Le Fourgon.</p>
+  </div>
+</section>
+
+<section id="match" class="match">
+  <div class="bubbles"></div>
+  <div class="wrap">
+    <span class="kicker">The Foliz Tour</span>
+    <h2>What's your Kombucha Match?</h2>
+    <p class="lead">Three fun questions, one flavour that fits you. Scan the QR code on the Foliz Bike in front of your campus, play, and win a free drink.</p>
+    <div class="quiz" id="quiz" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="stores" class="stores">
+  <div class="wrap">
+    <div style="grid-column:1/-1">
+      <span class="kicker">Store locator</span>
+      <h2>Find Foliz near you</h2>
+    </div>
+    <div class="store-list" id="store-list"></div>
+    <div id="map" role="region" aria-label="Map of Foliz points of sale"></div>
+  </div>
+</section>
+
+<section id="mixology" class="mix">
+  <div class="wrap">
+    <span class="kicker">Foliz Mixology · Place Saint-Pierre</span>
+    <h2>4 bars, 4 colours, 1 trail</h2>
+    <p class="lead">Four signature cocktails, each one exclusive to a historic bar of Place Saint-Pierre. Try them all, share them on your Story, tag @folizkombucha.</p>
+    <img class="mix-photo" src="img/cocktails.webp" alt="Kombucha cocktails" loading="lazy">
+    <div class="cocktails">
+      <article class="cocktail" style="--c:#f5c800"><span class="n">01 · Yellow</span><div><h3>Lemon-Ginger</h3><p>at Chez Tonton</p></div></article>
+      <article class="cocktail" style="--c:#a77bd6"><span class="n">02 · Purple</span><div><h3>Blackcurrant</h3><p>at La Couleur de la Culotte</p></div></article>
+      <article class="cocktail" style="--c:#e8384f"><span class="n">03 · Red</span><div><h3>Hibiscus</h3><p>at Le Saint des Seins</p></div></article>
+      <article class="cocktail" style="--c:#f39a1e"><span class="n">04 · Orange</span><div><h3>Citrus</h3><p>at Chez Mamie</p></div></article>
+    </div>
+    <div class="trail"><i style="background:#f5c800;border:0"></i><i></i><i></i><i></i> Collect the 4 colours of the Saint-Pierre trail.</div>
+  </div>
+</section>
+
+<section id="story" class="story">
+  <div class="wrap">
+    <img src="img/ginger-photo.webp" alt="Foliz Ginger Beer" loading="lazy">
+    <div>
+      <span class="kicker">Our story</span>
+      <h2>From a small village in the Gers</h2>
+      <p class="lead">Foliz was created by Gwendal and Charline in Cologne, in the Gers, where we still brew every bottle by hand. Fermented tea, real fruit, plants and spices: a natural alternative to industrial sodas. And because we love Toulouse, you'll find us riding the Foliz Bike through its streets.</p>
+      <div class="facts">
+        <div><b>100% organic</b><span>Certified, real fruit only</span></div>
+        <div><b>Returnable</b><span>75 cl bottles via Consign'Up</span></div>
+        <div><b>Short supply chain</b><span>Brewed and sold in the South-West</span></div>
+        <div><b>On a bike</b><span>Follow the Foliz Bike on Instagram</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><img src="img/logo-blanc.webp" alt="Foliz Kombucha"><p style="margin-top:12px">Organic craft kombucha, brewed in Cologne (Gers).</p></div>
+    <div><h4>Contact</h4><p>2 chemin de Ronde, 32430 Cologne<br>06 47 96 82 36<br>folizkombucha@gmail.com</p></div>
+    <div><h4>Follow us</h4><p><a href="https://www.instagram.com/folizkombucha/" target="_blank" rel="noopener">Instagram</a><br><a href="https://www.facebook.com/folizkombucha" target="_blank" rel="noopener">Facebook</a><br><a href="#" data-open-nl>Newsletter −10%</a></p></div>
+    <p class="disclaimer">Student project by CAK'ONSULT (TSM) — concept website for a class presentation. Not affiliated with Foliz Kombucha. No real orders, no data collected. Product photos © Foliz Kombucha.</p>
+  </div>
+</footer>
+
+<div class="veil"></div>
+<aside class="drawer" id="drawer" aria-label="Cart">
+  <header><h3>Your cart</h3><button class="x" data-close aria-label="Close">×</button></header>
+  <div class="items" id="items"></div>
+  <footer><div id="totals"></div><button class="btn" id="checkout">Checkout</button></footer>
+</aside>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="nl-title">
+  <div class="box">
+    <div class="art"><img src="img/passionne.webp" alt=""></div>
+    <div class="in">
+      <button class="x" data-close aria-label="Close">×</button>
+      <span class="kicker">Join the Foliz crew</span>
+      <h3 id="nl-title"><em>−10%</em> on your first order</h3>
+      <p>New flavours first, Foliz Bike locations, event invitations. One email a month, no spam.</p>
+      <form class="nl-form"><input type="email" name="email" required placeholder="your@email.com" aria-label="Email"><button class="btn">Get my code</button></form>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="vendor/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
