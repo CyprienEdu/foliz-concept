@@ -200,3 +200,29 @@ footer .disclaimer { grid-column: 1 / -1; border-top: 1px solid #3a342e; padding
 .scan .stack .btn { justify-content: center; }
 .scan .bottles { display: flex; justify-content: center; margin-top: 18px; }
 .scan .bottles img { height: 150px; width: auto; margin: 0 -8px; }
+
+/* responsive pass: tap targets >= 40px, no wrapping labels, no overflow under 420px */
+.btn, .chips button, .cart-btn { white-space: nowrap; }
+.chips { flex-wrap: wrap; }
+.chips button { min-height: 40px; }
+.sizes button { min-height: 36px; min-width: 52px; }
+.x { min-width: 40px; min-height: 40px; }
+.qty button { width: 36px; height: 36px; }
+.link-btn { border: 0; background: none; padding: 8px 0; text-decoration: underline; font-size: .9rem; }
+.cocktails { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 860px) { .cocktails { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) {
+  section { padding: 64px 0; }
+  .grid { grid-template-columns: 1fr; }
+  .cocktails { grid-template-columns: 1fr; }
+  .cocktail { min-height: 150px; }
+  .hero .ctas .btn, .result form .btn, .nl-form .btn { flex: 1 1 100%; justify-content: center; }
+  .nl-form input[type=email] { min-width: 0; flex-basis: 100%; }
+  .facts { grid-template-columns: 1fr; }
+  .modal .in { padding: 22px 18px; }
+  .modal h3 { font-size: 1.9rem; }
+  .card .pic { height: 240px; }
+  .card .pic img { height: 210px; }
+}
+.toast { white-space: nowrap; max-width: calc(100% - 32px); overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 640px) { .toast { bottom: auto; top: 80px; transform: translate(-50%, -160px); } .toast.on { transform: translate(-50%, 0); } }

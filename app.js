@@ -93,7 +93,7 @@ function renderCart() {
   $('#totals').innerHTML = `
     <div class="sum"><span>Subtotal</span><span>${eur(sub)}</span></div>
     <div class="sum"><span>Consign'Up deposit (refunded)</span><span>${eur(dep)}</span></div>
-    ${store.code ? `<div class="sum disc"><span>${CODE} −10%</span><span>−${eur(disc)}</span></div>` : '<div class="sum"><button class="x" style="font-size:.9rem;text-decoration:underline" data-open-nl>Get −10% with our newsletter</button></div>'}
+    ${store.code ? `<div class="sum disc"><span>${CODE} −10%</span><span>−${eur(disc)}</span></div>` : '<div class="sum"><button class="link-btn" data-open-nl>Get −10% with our newsletter</button></div>'}
     <div class="sum total"><span>Total</span><span>${eur(sub + dep - disc)}</span></div>`;
 }
 function openCart(on) { $('#drawer')?.classList.toggle('on', on); $('.veil')?.classList.toggle('on', on || $('#modal')?.classList.contains('on')); }
